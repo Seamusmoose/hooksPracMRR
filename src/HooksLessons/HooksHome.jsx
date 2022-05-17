@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Acocordion from "./Accordion";
 import AccordionItems from "../AccordionItems";
 import Search from "./Search";
 import DropDown from "./DropDown";
-import ColorItems from "../ColorItems";
+import options from "../Options";
 
 const HooksHome = () => {
+  const [selected, setSelected] = useState(options[0]);
   return (
     <div>
       {/* <Search /> */}
       {/* <Acocordion Items={AccordionItems} /> */}
-      <DropDown options={ColorItems} />
+      <DropDown
+        options={options}
+        selected={selected}
+        onSelectedChange={setSelected}
+      />
     </div>
   );
 };

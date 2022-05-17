@@ -1,3 +1,6 @@
+
+
+
 const AccordionItems = [
   {
     title: "what is React?",
